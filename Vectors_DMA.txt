@@ -1,0 +1,72 @@
+VECTOR:
+    vector<dataType> name({ value1, value2, value3 ....}); 
+    vector<dataType> name(size, value); 
+    vector<dataType> arrayName; 
+
+    DataType here can be of type className.
+    We can create array of elements each of type a class.
+    vector also starts with index 0.
+
+CLASS: 
+    Class must have both private and public sections.
+
+STRUCT:
+    Same as class but donot have any public and private sections. All are public by default.
+
+
+To access the values or functions of the class or struct:
+    call it as -- classElement.value 
+               -- classElement.function
+
+
+To CALL CONSTRUCTOR:  
+// calling inside the class method-1
+    ClassName(): variable(value) {}
+
+// calling inside the class method-2
+    ClassName (list-of-parameters){
+        // assigning values or instructions
+    }
+
+// calling outside the class
+    <class-name>::<class-name>(list-of-parameters){
+        // assigning values or instructions
+    }
+
+
+To CALL DESTRUCTOR: 
+// calling inside the class
+    ~ClassName() {
+        //some instructions
+    }
+
+// calling outside the class
+    ClassName :: ~ClassName(){
+        //some instructions
+    }
+
+
+DYNAMIC MEMORY ALLOCATION::
+FOR CREATING A BLOCK OF MEMORY:
+    int *p = NULL;
+    p = new int;
+    (or)
+    int *p= new int;
+    (or for an array)
+    int *p = new int[10];
+We can give this pointer a new allocation of the data
+
+FOR REMOVING THE ALLOCATED VARIABLE:
+    delete pointer-variable; // programmer responsibility to delete the dynamically allocated memory
+    (or)
+    delete[] p; // deletes the array pointed by the p
+
+ERRORS IN DYNAMIC ALLOC:
+int *p = new(nothrow) int[10]; //if the allocation fails it shows error of type bad_alloc
+// to get rid of that error and let the program cntinue we use this
+// alloc fails when there is not space for the new alloc 
+// in that case it alloc the new one to nullptr and let the program run.
+
+EXPLANATION ABOUT NEW KEYWORD:
+int *b= new int; // this shows that the new keyword gives new pointer to particular storage of memory
+// when we say new int , b contains the address of the new 4 bits storage allocated, it points to the first bit.

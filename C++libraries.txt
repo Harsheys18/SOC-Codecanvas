@@ -1,0 +1,6 @@
+Refer to the standard search and sort algos in the algorithm library.
+#include<algorithm>
+sort(myVector.begin(),myVector.end())
+sort(array,array+n)
+
+The above algos sort the code in time complexity of O(n)=n*ln(n)
