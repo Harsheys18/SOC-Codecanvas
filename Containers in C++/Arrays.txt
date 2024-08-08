@@ -1,0 +1,47 @@
+ARRAYS:
+
+How to use arrays in functions
+1. Using pointer
+    int* function(int a, int b, int c){
+      static array[3]; // when declared using the static keyword they have lifetime value fixed in thier variable
+      array[0]=a;
+      array[1]=b;
+      array[2]=c;  
+      return array;
+    }
+2. Using a structure
+    struct demo {
+    int arr[100];
+    };
+
+    demo func(int n) {
+        demo demo_mem;
+        for (int i = 0; i < n; ++i) {
+            demo_mem.arr[i] = i;
+        }
+        return demo_mem;
+    }
+
+    int main() {
+        demo a;
+        int n = 5;
+        a = func(n);
+        cout << "The Array is: ";
+        for (int i = 0; i < n; ++i) {
+            cout << a.arr[i] << "\t";
+        }
+        return 0;
+    }
+
+
+Passing on an array into the function:
+while declaring a function:
+  type function(type array_name[],...){
+    .....
+  }
+
+while calling that function:
+  function(array_name)
+
+finding length of an array:
+  sizeof(array_name)
